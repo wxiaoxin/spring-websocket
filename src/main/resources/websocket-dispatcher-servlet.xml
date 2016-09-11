@@ -6,6 +6,8 @@
 
     <websocket:handlers>
         <websocket:mapping path="/macro" handler="macroHandler" />
+        <!-- sockjs -->
+        <websocket:sockjs />
     </websocket:handlers>
 
     <bean id="macroHandler" class="com.xx.spring.websocket.socket.MarcoHandlerSocket" />

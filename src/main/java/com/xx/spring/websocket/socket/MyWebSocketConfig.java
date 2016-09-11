@@ -19,7 +19,13 @@ public class MyWebSocketConfig implements WebSocketConfigurer {
 
 
     public void registerWebSocketHandlers(WebSocketHandlerRegistry webSocketHandlerRegistry) {
-        webSocketHandlerRegistry.addHandler(marcoHandlerSocket(), "/websocket/macro");
+
+        // sockjs
+        webSocketHandlerRegistry.addHandler(marcoHandlerSocket(), "/websocket/macro").withSockJS();
+
+        // websocket
+//        webSocketHandlerRegistry.addHandler(marcoHandlerSocket(), "/websocket/macro");
+
     }
 
     @Bean
